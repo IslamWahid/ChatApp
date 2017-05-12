@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ChatGame</title>
+
+	<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ static_url('css/appStyle.css') }}">
+	<link href="../static/css/jquery-ui.css" type="text/css">
+</head>
+<body>
+
+	<section class="text-center" id="welcome">
+		<h1> <small>Welcome to </small>Chat-Game</h1>
+		<br>
+		<form class="">
+			<div class="form-inline">
+				<input type="text" class="form-control" id="userName" placeholder="UserName">
+				<input type="button" class="btn-primary form-control" onclick="start()" value="Go!!">
+			</div>
+		</form>
+	</section>
+	<div class="text-center" id="header" >
+		<h1 style="color:#c52a2a;" id="name"> </h1>  <br>
+	</div>
+	<div id="container" hidden="">
+		<div id="online_people_group">
+			<h4 class="fixed" style="height:30px; text-align:center;" >
+				My <span style="color:#8B0000;">Friends</span>
+			</h4>
+			<div id="online_people" ></div>
+			<div id="people_group_separator">
+				<hr style="color:#c52a2a; width:90%;" />
+			</div>
+			<h4 class="fixed" style="height:30px; text-align:center;" >
+				My <span style="color:#8B0000;">Groups</span></h4>
+			<div id="online_group">		</div>
+		</div>
+		<div id="all_people_group">
+			<div id="all_people" style="margin:50px 20px;">
+				<h4>
+					Suggested <span style="color:#8B0000;">People</span>
+				</h4>
+				<ul id="flexiselDemo1">
+				</ul>
+			</div>
+			<div id="all_groups" style="margin:130px 20px;">
+				<h4>
+					Suggested <span style="color:#8B0000;">Groups</span>
+				</h4>
+				<ul id="flexiselDemo2" >
+				</ul>
+			</div>
+			<div id="groupAdd" class="form-inline text-right" style="margin-right:40px;">
+				<input type="text" class="form-control" id="groupName" placeholder="Group Name">
+				<input type="button" class="btn-primary form-control" onclick="createGroup()" value="Create Group">
+			</div>
+			<div id="chat" >
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="{{ static_url('js/jquery-3.1.1.js') }}"></script>
+	<script src="../static/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.flexisel.js"></script>
+	<script src="{{ static_url('js/chatApp.js') }}"></script>
+</body>
+</html>
